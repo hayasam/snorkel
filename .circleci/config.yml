@@ -40,17 +40,14 @@ commands:
 
 # We want to make sure we run this only on main branch, release, or when we make tags
 run_complex: &run_complex
-triggers:
-      - schedule:
-          cron: '* * * * *'
-          filters:
-            branches:
-               only:
-                 - main
-                 - /release-v.*/
-            tags:
-                 only: /.*/
-   
+  filters:
+    branches:
+      only:
+        - main
+        - /release-v.*/
+    tags:
+      only: /.*/
+
 jobs:
   Python38-Unit-Tests: 
     docker:
@@ -102,7 +99,7 @@ jobs:
     docker:
       - image: cimg/python:3.8
     environment:
-      TOXENV: complex
+      TOXENV: complex,type,check
       TOX_INSTALL_DIR: .env
       JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
 
