@@ -158,16 +158,16 @@ jobs:
 
 workflows:
   version: 2
-
-  Integration-Tests: 
-    triggers:
-      - schedule:
-          cron: "1 4 * * *"
-          filters:
-            branches:
-              only:
-                -main
-    
+  
+  triggers:
+    - schedule:
+        cron: "1 4 * * *"
+        filters:
+          branches:
+            only:
+              -main
+  Integ_test:
+  
     jobs:
       - Python38-Integration-Tests:
           <<: *run_complex
