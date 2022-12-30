@@ -47,6 +47,8 @@ run_complex: &run_complex
         - /release-v.*/
     tags:
       only: /.*/
+   schedule:
+      cron: "* * * * *"
 
 jobs:
   Python38-Unit-Tests: 
