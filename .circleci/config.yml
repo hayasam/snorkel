@@ -158,14 +158,6 @@ jobs:
 
 workflows:
   version: 2
-  
-  triggers:
-    - schedule:
-        cron: "1 4 * * *"
-        filters:
-          branches:
-            only:
-              -main
   Integ_test:
   
     jobs:
