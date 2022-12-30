@@ -162,8 +162,8 @@ workflows:
   Integration-Tests: 
     triggers:
       - schedule:
-          cron:"*****"
-            filters:
+          cron:"**/1***"
+          filters:
               branches:
                 only:
                   -master  
