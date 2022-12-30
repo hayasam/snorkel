@@ -40,16 +40,17 @@ commands:
 
 # We want to make sure we run this only on main branch, release, or when we make tags
 run_complex: &run_complex
-  filters:
-    branches:
-      only:
-        - main
-        - /release-v.*/
-    tags:
-      only: /.*/
-   schedule:
-      cron: "* * * * *"
-
+triggers:
+      - schedule:
+          cron: '* * * * *'
+          filters:
+            branches:
+               only:
+                 - main
+                 - /release-v.*/
+            tags:
+                 only: /.*/
+   
 jobs:
   Python38-Unit-Tests: 
     docker:
