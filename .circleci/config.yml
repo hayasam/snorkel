@@ -162,7 +162,7 @@ workflows:
   Integration-Tests: 
     triggers:
       - schedule:
-          cron: "1 * * * *"
+          cron: "1 4 * * *"
           filters:
             branches:
               only:
