@@ -53,7 +53,7 @@ jobs:
     docker:
       - image: cimg/python:3.8
     environment:
-      TOXENV: coverage,doctest,type,check 
+      TOXENV: coverage,doctest
       TOX_INSTALL_DIR: .env
       JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
       PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION: python
@@ -69,7 +69,7 @@ jobs:
     docker:
       - image: cimg/python:3.7
     environment:
-      TOXENV: coverage,doctest,type,check 
+      TOXENV: coverage,doctest
       TOX_INSTALL_DIR: .env
       JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
       PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION: python
@@ -85,7 +85,7 @@ jobs:
     docker:
       - image: cimg/python:3.6
     environment:
-      TOXENV: coverage,doctest,type,check 
+      TOXENV: coverage,doctest
       TOX_INSTALL_DIR: .env
       JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
 
@@ -99,7 +99,7 @@ jobs:
     docker:
       - image: cimg/python:3.8
     environment:
-      TOXENV: complex,type,check
+      TOXENV: complex
       TOX_INSTALL_DIR: .env
       JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
 
@@ -127,7 +127,7 @@ jobs:
     docker:
       - image: cimg/python:3.7
     environment:
-      TOXENV: complex,type,check
+      TOXENV: complex
       TOX_INSTALL_DIR: .env
       JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
 
@@ -145,7 +145,7 @@ jobs:
     docker:
       - image: cimg/python:3.6
     environment:
-      TOXENV: coverage,complex,spark,doctest,type,check 
+      TOXENV: coverage,complex,spark,doctest
       TOX_INSTALL_DIR: .env
       JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
 
