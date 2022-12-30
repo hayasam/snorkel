@@ -163,6 +163,9 @@ workflows:
     triggers:
       - schedule:
           cron: "1 * * * *"
+          filters:
+            only:
+              -master
     
     jobs:
       - Python38-Integration-Tests:
