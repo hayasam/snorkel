@@ -165,8 +165,7 @@ workflows:
           cron: "1 * * * *"
           filters:
             branches:
-              only:
-               -master
+              only: main
     
     jobs:
       - Python38-Integration-Tests:
