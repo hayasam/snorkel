@@ -54,3 +54,4 @@ pytest-cov>=2.7.0
 pytest-doctestplus>=0.3.0
 tox>=3.13.0
 protobuf>=3.19.5
+tornado>=6.3.2 # not directly required, pinned by Snyk to avoid a vulnerability
